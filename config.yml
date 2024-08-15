@@ -1,6 +1,6 @@
-baseURL: "https://examplesite.com/"
-title: ExampleSite
-paginate: 5
+baseURL: "https://wordsthatworkwonders.com/"
+title: Words That Work Wonders
+paginate: 50
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -14,24 +14,23 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
-  author: Me
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  title: Get 5 New Clients In The Next 90 Days
+  description: "Words That Work Wonders"
+  keywords: [Portfolio]
+  author: Dave Mainville
+  images: ["./assets/callout.webp"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
-  disableThemeToggle: false
+  defaultTheme: light  # dark, light
+  disableThemeToggle: true
 
+  UseHugoToc: true
   ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: false
   ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
-  UseHugoToc: true
+  ShowRssButtonInSectionTermList: false
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: false
@@ -56,31 +55,16 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    enabled: true # needs to be explicitly set
+    title: Get 5 New Clients In The Next 90 Days Without Breaking The Bank
+    subtitle: "You Change Lives. Let Us Do The Writing."
+    imageUrl: "callout.jpg"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
     buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
-
-  # home-info mode
-  homeInfoParams:
-    Title: "Hello there \U0001F44B"
-    Content: Welcome to my blog
-
-  socialIcons:
-    - name: x
-      url: "https://x.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
-    - name: github
-      url: "https://github.com/"
+      - name: Learn How
+        url: how
 
   analytics:
     google:
@@ -95,11 +79,6 @@ params:
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
 
-  editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
-
   # for search
   # https://fusejs.io/api/options.html
   fuseOpts:
@@ -111,20 +90,14 @@ params:
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
+
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: how
+      name: How We Work
+      url: /how/
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
-      weight: 30
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
